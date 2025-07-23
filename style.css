@@ -154,6 +154,12 @@ header {
     margin: 0 auto;
 }
 
+.row__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /*
 
 HIGHLIGHTS
@@ -249,11 +255,15 @@ FEATURES
 
 .books {
     display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
 }
 
 .book {
-    width: 25%;
-    padding: 24px;
+    flex: 1 1 calc(25% - 24px);
+    max-width: calc(25% - 24px);
+    box-sizing: border-box;
 }
 
 .book__img {
@@ -296,4 +306,14 @@ FEATURES
     text-decoration: line-through;
     padding-right: 6px;
     color: #bfbfbf;
+}
+
+/* 
+
+EXPLORE
+
+*/
+
+#explore {
+    background-color: rgba(115,66,214,0.1);
 }
